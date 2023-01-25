@@ -14,17 +14,10 @@ public class User {
    private Long id;
 
    @OneToOne (cascade = CascadeType.ALL)
-   Car car;
+   private Car car;
 
-   public Car getCar() {
-      return car;
-   }
-   public void setCar(Car car) {
-      this.car = car;
-   }
    @Column(name = "name")
    private String firstName;
-
    @Column(name = "lastName")
    private String lastName;
 
@@ -32,11 +25,18 @@ public class User {
    private String email;
 
    public User() {}
-   
+
    public User(String firstName, String lastName, String email) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+   }
+
+   public Car getCar() {
+      return car;
+   }
+   public void setCar(Car car) {
+      this.car = car;
    }
 
    public Long getId() {

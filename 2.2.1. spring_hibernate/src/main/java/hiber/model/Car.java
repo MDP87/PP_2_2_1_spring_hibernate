@@ -21,15 +21,10 @@ public class Car {
     @Column (name = "series")
     private int series;
 
+    public Car() {
+    }
     public Long getId() {
         return id;
-    }
-
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-
-    public Car() {
     }
     public String getModel() {
         return model;

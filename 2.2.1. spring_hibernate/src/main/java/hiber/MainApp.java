@@ -51,7 +51,7 @@ public class MainApp {
       }
 
       List<User> userByCars = userService.getUserByCar("BMW", 1985);
-      System.out.println("______________________");
+      System.out.println("_________Get User By Car_____________");
 
       for (User user : userByCars) {
          System.out.println(user);
